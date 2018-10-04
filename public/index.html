@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title></title>
+</head>
+
+<body>
+    <h2>My Unicorns</h2>     <img class="unicorn" src="https://groupecasino.i.lithium.com/t5/image/serverpage/image-id/140791i09A0E9ACC0FF4085?v=1.0"> 
+    magic:<input type="text" id="magic" placeholder="Enter My magic" /> 
+    name: <input type="text" id="name" placeholder="Enter My Name" />
+    <button type="button" id="addunicorn" class="btn btn-primary">Add</button>
+    <div class="Unicorns"> </div>
+    <script id="unicorns-template" type="text/x-handlebars-template">
+        {{#each Unicorns}}
+        <p class="unicorn" data-id="{{_id}}">
+          <span> {{ Name }} </span> - <span>{{ Magic }} </span>
+          <button class="remove-unicorn">remove</button>
+        </p>
+        {{/each }}
+    </script>
+
+    <script src="jquery\dist\jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
